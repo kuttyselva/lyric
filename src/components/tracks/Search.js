@@ -29,7 +29,7 @@ export default class Search extends Component {
                            <p className="lead text-center">Get the lyrics for any song</p>
                                 <form onSubmit={this.formSubmit.bind(this,dispatch)}>
                                     <div className="form-group">
-                                        <input type="text" className="form-control form-control-lg" style={{borderRadius:'20px'}} placeholder="Song title..." name="trackTitle"value={this.state.trackTitle} onChange={(e)=>{this.setState({trackTitle:e.target.value})}}/>
+                                        <input type="text" className="form-control form-control-lg" style={{borderRadius:'20px'}} placeholder="Song Lyric..." name="trackTitle"value={this.state.trackTitle} onChange={(e)=>{this.setState({trackTitle:e.target.value})}}/>
                                     </div>
                                     <button className="btn btn-dark btn-lg btn-block mb-5" style={{borderRadius:'20px'}}>Check Lyrics</button>
                                 </form>

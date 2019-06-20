@@ -28,6 +28,7 @@ class Lyrics extends Component {
        else{
            return(
             <React.Fragment>
+                {console.log(track)}
                 <Link to="/" className="btn btn-dark btn-sm mb-4" style={{borderRadius:'20px'}}>Go Back</Link>
                 <div className="card" style={{borderRadius:'20px'}}>
                     <div className="card-header">
@@ -42,9 +43,13 @@ class Lyrics extends Component {
                     <li className="list-group-item">
                         <strong>Album Id</strong> : {track.album_id}
                     </li>
-                    <li className="list-group-item">
-                        <strong>Song Genre</strong> : {track.primary_genres.music_genre_list[0].music_genre.music_genre_name}
-                    </li>
+                    {track.primary_genres.music_genre_list.length ==0 ?<li className="list-group-item">
+                        <strong>Song Genre</strong> : not found
+                    </li>:
+                <li className="list-group-item">
+                <strong>Song Genre</strong> : {track.primary_genres.music_genre_list[0].music_genre.music_genre_name}
+            </li>}
+      
                     <li className="list-group-item">
                       <strong>Explicit Words</strong>:  {track.explict === 0? 'No':'Yes'}
                     </li>
